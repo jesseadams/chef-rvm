@@ -81,6 +81,8 @@ class Chef
         Chef::Log.info stdout.read
         Chef::Log.info '###############################'
 
+        return "ruby-#{str}" if stdout.read.split('\n').first.nil?
+
         result = stdout.read.split('\n').first.chomp
         if result =~ /^-/   # if the result has a leading dash, value is bogus
           Chef::Log.warn("Could not determine canonical RVM string for: #{str} " +
