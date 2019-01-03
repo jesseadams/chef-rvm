@@ -33,7 +33,7 @@ class Chef
           else
             ruby = rubie
             ruby_patch = nil
-            ruby_rubygems_version = nil
+            ruby_rubygems_version = opts[:rubygems_version]
           end
 
           rvm_ruby ruby do

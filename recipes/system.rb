@@ -26,7 +26,8 @@ if perform_install_rubies
   install_rubies  :rubies => node['rvm']['rubies'],
                   :default_ruby => node['rvm']['default_ruby'],
                   :global_gems => node['rvm']['global_gems'],
-                  :gems => node['rvm']['gems']
+                  :gems => node['rvm']['gems'],
+                  :rubygems_version => node['rvm']['rubygems_version']
 end
 
 # add users to rvm group
